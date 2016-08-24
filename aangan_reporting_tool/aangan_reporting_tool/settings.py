@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aangan_report',
+    # 'aangan_report_csv',
 ]
 
 MIDDLEWARE = [
@@ -74,10 +75,21 @@ WSGI_APPLICATION = 'aangan_reporting_tool.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'aangan',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': '192.168.2.130',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 

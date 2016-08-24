@@ -41,7 +41,7 @@ class Question(TimeStampedModel):
 
 
 class ReportInstance(TimeStampedModel):
-    doj = models.DateTimeField(default=datetime.now, verbose_name ='Date Of Joining')
+    doc = models.DateTimeField(default=datetime.now, verbose_name ='Date Of Creation')
 
     class Meta:
         db_table = "report_instance"
