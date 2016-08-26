@@ -7,6 +7,7 @@ from django.db import models
 
 
 class ScoringSchema(TimeStampedModel):
+    uid = models.IntegerField(unique=True, blank=False, default=None)
     name = models.CharField(max_length=200, verbose_name ='Name')
     color = models.CharField(max_length=50, verbose_name='Color')
 
@@ -18,6 +19,7 @@ class ScoringSchema(TimeStampedModel):
 
 
 class Category(TimeStampedModel):
+    uid = models.IntegerField(unique=True, blank=False, default=None)
     name = models.CharField(max_length=300, verbose_name ='Category Name')
     description = models.TextField()
 
@@ -29,6 +31,7 @@ class Category(TimeStampedModel):
 
 
 class Question(TimeStampedModel):
+    uid = models.IntegerField(unique=True, blank=False, default=None)
     category = models.ForeignKey(Category, verbose_name ='Category Id')
     name = models.CharField(max_length=200, verbose_name ='Question Name')
     formula = models.TextField()

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aangan_report',
-    # 'aangan_report_csv',
+    'aangan_report_csv',
 ]
 
 MIDDLEWARE = [
