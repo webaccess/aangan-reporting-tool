@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 
+from datetime import datetime
+
 from django.db import models
 
 
@@ -195,3 +197,69 @@ class SurveyOne(models.Model):
 
     class Meta:
         db_table = "survey_one"
+
+
+class SurveyTwo(models.Model):
+    row_no = models.CharField(max_length=50)
+    row_no_0 = models.CharField(max_length=50)
+    row_no_1 = models.CharField(max_length=50)
+    aanganwadi = models.CharField(max_length=15)
+    case_id = models.CharField(max_length=50)
+    date_modified = models.DateTimeField()
+    user_id = models.CharField(max_length=50)
+    xmlns= models.CharField(max_length=250)
+    case_close = models.CharField(max_length=50)
+    case_name = models.CharField(max_length=50)
+    case_type = models.CharField(max_length=50)
+    case_owner_id = models.CharField(max_length=150)
+    case_index_parent_text = models.CharField(max_length=350)
+    case_index_parent_casetype = models.CharField(max_length=50)
+    update_child_age = models.CharField(max_length=50)
+    update_child_disabilities = models.CharField(max_length=50)
+    update_child_earn_money = models.CharField(max_length=50)
+    update_child_earns = models.CharField(max_length=50)
+    update_child_enrolled_school = models.CharField(max_length=50)
+    update_child_gender = models.CharField(max_length=50)
+    update_child_goes_school = models.CharField(max_length=50)
+    update_child_id_documents = models.CharField(max_length=50)
+    update_child_live_with_you = models.CharField(max_length=50)
+    update_child_without_supervision = models.CharField(max_length=50)
+    update_days_in_school = models.CharField(max_length=50)
+    update_disability_certificate = models.CharField(max_length=50)
+    update_other_specify = models.CharField(max_length=50)
+    update_ration_card_color = models.CharField(max_length=50)
+    update_reason_not_attending = models.CharField(max_length=50)
+    update_relationship_with_respondent = models.CharField(max_length=50)
+    child_age = models.CharField(max_length=50)
+    child_disabilities = models.CharField(max_length=50)
+    child_earn_money = models.CharField(max_length=50)
+    child_earns = models.CharField(max_length=50)
+    child_enrolled_school = models.CharField(max_length=50)
+    child_gender = models.CharField(max_length=50)
+    child_goes_school = models.CharField(max_length=50)
+    child_hours_work = models.CharField(max_length=50)
+    child_id_documents = models.CharField(max_length=150)
+    child_id_documents_other_specify = models.CharField(max_length=50)
+    child_live_with_you = models.CharField(max_length=50)
+    child_name = models.CharField(max_length=50)
+    child_occupation = models.CharField(max_length=50)
+    child_without_supervision = models.CharField(max_length=50)
+    child_work_months = models.CharField(max_length=50)
+    school_class = models.CharField(max_length=50)
+    disability_certificate = models.CharField(max_length=50)
+    days_in_school = models.CharField(max_length=50)
+    end_repeat = models.CharField(max_length=50)
+    happened_to_child = models.CharField(max_length=50)
+    hv_gender = models.CharField(max_length=50)
+    illness = models.CharField(max_length=50)
+    other = models.CharField(max_length=50)
+    other_specify = models.CharField(max_length=50)
+    reason_for_living_away = models.CharField(max_length=50)
+    reason_for_not_going_to_anganwadi = models.CharField(max_length=50)
+    reason_not_attending = models.CharField(max_length=50)
+    relationship_with_respondent = models.CharField(max_length=50)
+    type_of_school = models.CharField(max_length=50)
+
+
+    class Meta:
+        db_table = "survey_two"

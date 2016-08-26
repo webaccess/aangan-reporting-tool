@@ -1,6 +1,7 @@
 import csv
+import datetime
 
-from .models import SurveyOne
+from .models import SurveyOne, SurveyTwo
 from django.http import HttpResponse
 
 
@@ -199,5 +200,72 @@ def upload_survey_one(request):
                                                ) for row in reader])
     return HttpResponse(status=201)
 
-# if __name__ == '__main__':
-#     upload_survey_one()
+
+def upload_survey_two(request):
+    with open('/home/web/Desktop/children.csv') as f:
+        reader = csv.reader(f, delimiter=',')
+        header = next(reader)
+        try:
+            SurveyTwo.objects.bulk_create([SurveyTwo(row_no=row[0],
+                                                     row_no_0=row[1],
+                                                     row_no_1=row[2],
+                                                     aanganwadi=row[3],
+                                                     case_id=row[4],
+                                                     date_modified=datetime.datetime.strptime(row[5], '%Y-%m-%d %H:%M:%S'),
+                                                     user_id=row[6],
+                                                     xmlns=row[7],
+                                                     case_close = row[8],
+                                                     case_name = row[9],
+                                                     case_type=row[10],
+                                                     case_owner_id=row[11],
+                                                     case_index_parent_text=row[12],
+                                                     case_index_parent_casetype=row[13],
+                                                     update_child_age=row[14],
+                                                     update_child_disabilities=row[15],
+                                                     update_child_earn_money=row[16],
+                                                     update_child_earns=row[17],
+                                                     update_child_enrolled_school=row[18],
+                                                     update_child_gender=row[19],
+                                                     update_child_goes_school=row[20],
+                                                     update_child_id_documents=row[21],
+                                                     update_child_live_with_you=row[22],
+                                                     update_child_without_supervision=row[23],
+                                                     update_days_in_school=row[24],
+                                                     update_disability_certificate=row[25],
+                                                     update_other_specify=row[26],
+                                                     update_ration_card_color=row[27],
+                                                     update_reason_not_attending=row[28],
+                                                     update_relationship_with_respondent=row[29],
+                                                     child_age=row[30],
+                                                     child_disabilities=row[31],
+                                                     child_earn_money=row[32],
+                                                     child_earns=row[33],
+                                                     child_enrolled_school=row[34],
+                                                     child_gender=row[35],
+                                                     child_goes_school=row[36],
+                                                     child_hours_work=row[37],
+                                                     child_id_documents=row[38],
+                                                     child_id_documents_other_specify=row[39],
+                                                     child_live_with_you=row[40],
+                                                     child_name=row[41],
+                                                     child_occupation=row[42],
+                                                     child_without_supervision=row[43],
+                                                     child_work_months=row[44],
+                                                     school_class=row[45],
+                                                     disability_certificate=row[46],
+                                                     days_in_school=row[47],
+                                                     end_repeat=row[48],
+                                                     happened_to_child=row[49],
+                                                     hv_gender=row[50],
+                                                     illness=row[51],
+                                                     other=row[52],
+                                                     other_specify=row[53],
+                                                     reason_for_living_away=row[54],
+                                                     reason_for_not_going_to_anganwadi=row[55],
+                                                     reason_not_attending=row[56],
+                                                     relationship_with_respondent=row[57],
+                                                     type_of_school=row[58]
+                                                   ) for row in reader])
+        except Exception as e:
+            print e
+    return HttpResponse(status=201)

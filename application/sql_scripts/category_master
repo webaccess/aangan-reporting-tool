@@ -1,0 +1,13 @@
+INSERT INTO `category`(`created`, `modified`, `name`, `description`, `uid`) VALUES 
+(now(),now(),'Community Demographics(Social Exclusion and Marriage)','', 1),
+(now(),now(),'Essential household documents(Stability)','', 2),
+(now(),now(),'Education (Safety through schooling)','', 3),
+(now(),now(),'Household economic profile and financial prepardness','', 4),
+(now(),now(),'Child health (protection and safety measure)','', 5),
+(now(),now(),'Lack of supervision and unsafe spaces','', 6),
+(now(),now(),'Violence and abuse(*self reported by children ) Physican abuse,emotional abuse and sexual abuse.','', 7),
+(now(),now(),'Child victim of traffacking and serious harm child marriage child labour Runaway Missing','', 8),
+(now(),now(),'Accessibility of government officials and institutions Police Aanganwadi Hospital School','', 9),
+(now(),now(),'Access to government schemes and current state of readiness.','', 10);
+
+
