@@ -180,6 +180,7 @@ class SurveyOne(models.Model):
     primary_healthcare_why = models.CharField(max_length=50)
     primary_healthcare_followed_procedure = models.CharField(max_length=200)
     primary_healthcare_procedures_happy = models.CharField(max_length=200)
+    schemes_schemes = models.CharField(max_length=200)
     schemes_right_to_education = models.CharField(max_length=200)
     schemes_right_to_food = models.CharField(max_length=200)
     schemes_right_to_employment = models.CharField(max_length=200)
@@ -191,9 +192,9 @@ class SurveyOne(models.Model):
     schemes_labour_schemes = models.CharField(max_length=200)
     children_info_gender = models.CharField(max_length=100)
     info_caseid = models.CharField(max_length=15)
-    info_completed_time = models.CharField(max_length=50)
+    info_completed_time = models.DateTimeField()
     info_username = models.CharField(max_length=200)
-    server_received_on = models.CharField(max_length=50)
+    server_received_on = models.DateTimeField()
 
     class Meta:
         db_table = "survey_one"
