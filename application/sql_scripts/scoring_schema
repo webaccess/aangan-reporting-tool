@@ -1,0 +1,5 @@
+INSERT INTO `scoring_schema`(`created`, `modified`, `name`, `color`, `uid`) VALUES 
+(now(),now(),'Extremely High/Dangerous risk level','#B40C0C',1),
+(now(),now(),'High Risk','#FF8000',2),
+(now(),now(),'Medium Risk','#EFEC72',3),
+(now(),now(),'Low/No risk','#80FF00',4);
