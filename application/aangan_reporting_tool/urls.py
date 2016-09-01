@@ -18,4 +18,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^aangan/', include('aangan_report_csv.urls')),
+    url(r'^test/', include('aangan_report.urls')),
 ]

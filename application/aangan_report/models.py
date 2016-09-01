@@ -24,7 +24,7 @@ class Category(TimeStampedModel):
     description = models.TextField()
 
     def __unicode__(self):
-        return self.name
+        return str(self.id) + ' : ' + self.name
 
     class Meta:
         db_table = "category"
@@ -37,7 +37,7 @@ class Question(TimeStampedModel):
     formula = models.TextField()
 
     def __unicode__(self):
-        return self.name
+        return str(self.id) + ' : ' + self.name
 
     class Meta:
         db_table = "question"
