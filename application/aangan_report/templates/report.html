@@ -6,9 +6,13 @@
 </head>
 <body>
 <center><h1>Report Page</h1></center>
-<form action="#" method="POST">
-   <center> <input id="submit" type="button" value="Generate Report" /></center>
+
+<form action="/aangan/report/generate-report/" method="post">{% csrf_token %}
+    {{ form }}
+    <center><button type="submit">Generate Report</button></center>
 </form>
+
+
 
 
 <!-- data list -->
